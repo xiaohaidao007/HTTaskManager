@@ -12,6 +12,7 @@
 		CF17261F1E9514A600AE99E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17261E1E9514A600AE99E7 /* ViewController.m */; };
 		CF1726211E9514A600AE99E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1726201E9514A600AE99E7 /* Assets.xcassets */; };
 		CF1726241E9514A600AE99E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1726221E9514A600AE99E7 /* Main.storyboard */; };
+		CF17262E1E9514E800AE99E7 /* HTTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17262D1E9514E800AE99E7 /* HTTaskManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		CF1726201E9514A600AE99E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1726231E9514A600AE99E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF1726251E9514A600AE99E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF17262C1E9514E800AE99E7 /* HTTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaskManager.h; sourceTree = "<group>"; };
+		CF17262D1E9514E800AE99E7 /* HTTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaskManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		CF1726161E9514A600AE99E7 /* ExecShellCMD */ = {
 			isa = PBXGroup;
 			children = (
+				CF17262B1E9514B700AE99E7 /* Tool */,
 				CF1726171E9514A600AE99E7 /* AppDelegate.h */,
 				CF1726181E9514A600AE99E7 /* AppDelegate.m */,
 				CF17261D1E9514A600AE99E7 /* ViewController.h */,
@@ -74,6 +78,15 @@
 				CF17261B1E9514A600AE99E7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF17262B1E9514B700AE99E7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CF17262C1E9514E800AE99E7 /* HTTaskManager.h */,
+				CF17262D1E9514E800AE99E7 /* HTTaskManager.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +120,7 @@
 				TargetAttributes = {
 					CF1726131E9514A600AE99E7 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF17262E1E9514E800AE99E7 /* HTTaskManager.m in Sources */,
 				CF17261F1E9514A600AE99E7 /* ViewController.m in Sources */,
 				CF17261C1E9514A600AE99E7 /* main.m in Sources */,
 				CF1726191E9514A600AE99E7 /* AppDelegate.m in Sources */,
@@ -257,11 +272,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExecShellCMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guogh.ExecShellCMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -269,11 +287,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExecShellCMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guogh.ExecShellCMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
